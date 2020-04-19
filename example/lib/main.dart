@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.white,
           rippleColor: Colors.white,
           subMenuBackgroundColor: Colors.grey.shade100,
+          divisionColor: Colors.grey,
           header: Container(
             height: size.height * 0.25,
             child: Center(child: Column(

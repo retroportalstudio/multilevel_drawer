@@ -110,7 +110,7 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                         child: CustomPaint(
                           size: Size(10, itemSize),
                           painter: _ArrowPainter(
-                              arrowColor: widget.subMenuBackgroundColor.withOpacity(0.7)),
+                              arrowColor: widget.subMenuBackgroundColor),
                         ))
                   ],
                 )),
@@ -224,8 +224,9 @@ class _ArrowPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    Color paintColor = arrowColor??Colors.white;
     Paint paint = Paint()
-      ..color = arrowColor
+      ..color = paintColor.withOpacity(0.7)
       ..style = PaintingStyle.fill;
     Path path = Path();
     path.moveTo(0, size.height / 2);

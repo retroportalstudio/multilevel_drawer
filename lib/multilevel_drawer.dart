@@ -71,16 +71,20 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
       width: size.width,
       child: Stack(
         children: <Widget>[
-          if (selectedPosition != -1 && drawerItems[selectedPosition].subMenuItems != null) ...[
+          if (selectedPosition != -1 &&
+              drawerItems[selectedPosition].subMenuItems != null) ...[
             AnimatedPositioned(
                 duration: Duration(milliseconds: 200),
                 left: selectedPosition == -1 ? 0 : size.width / 2,
-                top: selectedPosition != -1 ? positions[selectedPosition] : positions[lastPosition],
+                top: selectedPosition != -1
+                    ? positions[selectedPosition]
+                    : positions[lastPosition],
                 child: Stack(
                   children: <Widget>[
                     Container(
                       width: size.width / 2,
-                      height: itemSize * drawerItems[selectedPosition].subMenuItems.length,
+                      height: itemSize *
+                          drawerItems[selectedPosition].subMenuItems.length,
                     ),
                     Positioned(
                       top: 0,
@@ -88,15 +92,16 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                       child: Container(
                         width: size.width / 2 - 10,
                         child: Column(
-                          children:
-                              drawerItems[selectedPosition].subMenuItems.map<Widget>((subMenuItem) {
+                          children: drawerItems[selectedPosition]
+                              .subMenuItems
+                              .map<Widget>((subMenuItem) {
                             return _MLChoiceItem(
-                              color: widget.subMenuBackgroundColor ?? Colors.white,
+                              color:
+                                  widget.subMenuBackgroundColor ?? Colors.white,
                               divisionColor: widget.divisionColor,
                               rippleColor: widget.rippleColor,
                               onTap: () {
                                 subMenuItem.onClick();
-                                Navigator.of(context).pop();
                               },
                               child: subMenuItem.submenuContent,
                             );
@@ -117,7 +122,8 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
           ],
           Container(
             decoration: BoxDecoration(
-                color: widget.backgroundColor ?? Colors.white, gradient: widget.gradient),
+                color: widget.backgroundColor ?? Colors.white,
+                gradient: widget.gradient),
             width: size.width / 2,
             height: size.height,
             child: Column(
@@ -135,8 +141,9 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                         trailing: item.trailing,
                         width: size.width / 2,
                         divisionColor: widget.divisionColor,
-                        color:
-                            widget.gradient == null ? widget.backgroundColor : Colors.transparent,
+                        color: widget.gradient == null
+                            ? widget.backgroundColor
+                            : Colors.transparent,
                         rippleColor: widget.rippleColor,
                         child: item.content,
                         onTap: () {
@@ -145,7 +152,6 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                           } else {
                             item.onClick();
                             openSubDrawer(selectedPosition);
-                            Navigator.of(context).pop();
                           }
                         },
                       );
@@ -191,7 +197,9 @@ class _MLChoiceItem extends StatelessWidget {
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-              border: Border(bottom: BorderSide(color: divisionColor ?? Colors.grey, width: 1.0))),
+              border: Border(
+                  bottom: BorderSide(
+                      color: divisionColor ?? Colors.grey, width: 1.0))),
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -224,7 +232,7 @@ class _ArrowPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Color paintColor = arrowColor??Colors.white;
+    Color paintColor = arrowColor ?? Colors.white;
     Paint paint = Paint()
       ..color = paintColor.withOpacity(0.7)
       ..style = PaintingStyle.fill;

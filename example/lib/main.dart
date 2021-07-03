@@ -69,6 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       submenuContent: Text("Option 1")),
                   MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
                   MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 5")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 6")),
                 ],
                 onClick: () {}),
             MLMenuItem(
@@ -97,6 +100,128 @@ class _MyHomePageState extends State<MyHomePage> {
                   MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
                 ],
                 onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "Payments",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "Payments",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 1",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 2",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 3",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 4",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 5",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "New Option 6",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {
+
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondScreen()));
+                  }, submenuContent: Text("Option 1")),
+
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {
+                }),
           ],
         ),
         appBar: AppBar(

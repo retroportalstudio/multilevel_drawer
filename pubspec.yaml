@@ -1,9 +1,9 @@
 name: multilevel_drawer
 description: An easy to implement Multi Level Drawer for Flutter Applications. Just use this in place of regular Scaffold Drawer and you are ready to go.
-version: 1.0.3
+version: 1.1.0
 homepage: https://github.com/retroportalstudio/multilevel_drawer
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:

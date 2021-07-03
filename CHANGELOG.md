@@ -14,3 +14,10 @@
 ## [1.0.3] - May 24, 2020
 
 * Fixed Navigation Issue with Menu Items
+
+## [1.1.0] - July 03, 2021
+
+* Null Safety
+* Drawer Items Scroll
+* Adjusted Rendering for SubMenu for Lower Menu Items
+* Customizable Item Height

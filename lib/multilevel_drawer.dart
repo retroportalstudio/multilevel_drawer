@@ -116,7 +116,6 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                           ? max(0, positions[selectedPosition] - (drawUp ? (boxHeight - itemHeight) : 0))
                           : positions[lastPosition],
                       child: Container(
-                          decoration: BoxDecoration(color: widget.backgroundColor, gradient: widget.gradient),
                           width: size.width / 2,
                           height: min(size.height - (selectedPosition != -1
                               ? max(0, positions[selectedPosition] - (drawUp ? (boxHeight - itemHeight) : 0))
@@ -134,6 +133,7 @@ class _MultiLevelDrawerState extends State<MultiLevelDrawer> {
                                             .localeOf(context)
                                             .languageCode) ? 0 : 10,
                                         child: Container(
+                                          decoration: BoxDecoration(color: widget.backgroundColor, gradient: widget.gradient),
                                           width: size.width / 2 - 10,
                                           child: Column(
                                             children: drawerItems[selectedPosition].subMenuItems!.map<Widget>((subMenuItem) {
